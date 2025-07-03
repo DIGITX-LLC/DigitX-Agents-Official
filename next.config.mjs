@@ -30,7 +30,13 @@ const nextConfig = {
   },
   // Enable experimental features for better geo-location support
   experimental: {
-    middlewareRequestLog: true,
+    // Add valid experimental features here if needed
+  },
+  // Ensure source maps are properly generated in development
+  productionBrowserSourceMaps: false,
+  devIndicators: {
+    buildActivity: true,
+    buildActivityPosition: 'bottom-right',
   },
 };
 
