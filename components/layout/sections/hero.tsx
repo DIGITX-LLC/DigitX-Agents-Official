@@ -64,12 +64,12 @@ export const HeroSection = () => {
               variant="secondary"
               className="w-5/6 md:w-1/4 font-bold"
             >
-              <Link
+              {/* <Link
                 href="https://github.com/nobruf/shadcn-landing-page.git"
                 target="_blank"
               >
                 View Demo
-              </Link>
+              </Link> */}
             </Button>
           </MotionDiv>
         </MotionDiv>

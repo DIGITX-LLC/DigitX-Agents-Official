@@ -18,7 +18,15 @@ const nextConfig = {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "digitxevents.com",
+      },
     ],
+  },
+  // Enable experimental features for better geo-location support
+  experimental: {
+    middlewareRequestLog: true,
   },
 };
 
