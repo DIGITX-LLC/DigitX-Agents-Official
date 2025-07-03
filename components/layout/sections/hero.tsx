@@ -55,9 +55,14 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
-            <Button className="w-full sm:w-80 md:w-auto md:px-8 font-bold group/arrow bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black border-0">
-              Start Building Agents
-              <ArrowRight className="size-4 sm:size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+            <Button 
+              asChild 
+              className="w-full sm:w-80 md:w-auto md:px-8 font-bold group/arrow bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black border-0"
+            >
+              <a href="#contact">
+                Start Building Agents
+                <ArrowRight className="size-4 sm:size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </a>
             </Button>
 
             <Button

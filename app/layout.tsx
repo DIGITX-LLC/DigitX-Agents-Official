@@ -33,7 +33,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cn("min-h-screen bg-background", inter.className)}>
+      <body className={cn("min-h-screen bg-background", inter.className)} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
