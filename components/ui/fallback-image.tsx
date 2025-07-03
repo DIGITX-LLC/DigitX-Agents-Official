@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 interface FallbackImageProps {
   src: string;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   className?: string;
   fallbackSrc?: string;
   priority?: boolean;
@@ -45,6 +45,11 @@ export function FallbackImage({
     setIsLoading(false);
   };
 
+  // Validation: either fill should be true OR width and height should be provided
+  if (!fill && (!width || !height)) {
+    console.warn("FallbackImage: Either fill must be true or width and height must be provided");
+  }
+
   return (
     <div className={cn("relative overflow-hidden", className)}>
       {isLoading && (
@@ -55,12 +60,10 @@ export function FallbackImage({
       <Image
         src={imgSrc}
         alt={alt}
-        width={width}
-        height={height}
+        {...(fill ? { fill: true } : { width: width!, height: height! })}
         priority={priority}
         quality={quality}
         sizes={sizes}
-        fill={fill}
         onError={handleError}
         onLoad={handleLoad}
         className={cn(
