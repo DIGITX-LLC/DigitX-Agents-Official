@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { MotionDiv } from "@/components/ui/motion";
 import CardSwap, { Card } from "@/components/ui/CardSwap";
-import Image from "next/image";
+import { FallbackImage } from "@/components/ui/fallback-image";
 
 const products = [
   {
@@ -165,16 +165,14 @@ export const ProductsSection = () => {
                     <div className="flex flex-col h-full">
                       {/* Product Image - Made Larger */}
                       <div className="relative h-48 overflow-hidden">
-                        <Image 
+                        <FallbackImage 
                           src={product.image} 
                           alt={product.name}
                           fill
                           className="object-cover transition-transform duration-300 hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 400px"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop&crop=top";
-                          }}
+                          fallbackSrc="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop&crop=top"
+                          quality={75}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                       </div>

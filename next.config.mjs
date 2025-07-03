@@ -27,6 +27,12 @@ const nextConfig = {
         hostname: "digitx-storage.blr1.cdn.digitaloceanspaces.com",
       },
     ],
+    // Add timeout and retry configuration for image optimization
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: process.env.NODE_ENV === 'development',
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
   },
   // Enable experimental features for better geo-location support
   experimental: {

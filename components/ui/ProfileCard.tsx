@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
-import Image from "next/image";
+import { FallbackImage } from "./fallback-image";
 import "./ProfileCard.css";
 
 interface ProfileCardProps {
@@ -31,31 +31,26 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
           <div className="pc-shine" />
           <div className="pc-glare" />
           <div className="pc-avatar-content">
-            <Image
+            <FallbackImage
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
               width={400}
               height={400}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = "none";
-              }}
+              fallbackSrc="/demo-img.jpg"
+              quality={75}
             />
             {showUserInfo && (
               <div className="pc-user-info">
                 <div className="pc-user-details">
                   <div className="pc-mini-avatar">
-                    <Image
+                    <FallbackImage
                       src={miniAvatarUrl || avatarUrl}
                       alt={`${name || "User"} mini avatar`}
                       width={40}
                       height={40}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.opacity = "0.5";
-                        target.src = avatarUrl || "";
-                      }}
+                      fallbackSrc="/demo-img.jpg"
+                      quality={60}
                     />
                   </div>
                   <div className="pc-user-text">
