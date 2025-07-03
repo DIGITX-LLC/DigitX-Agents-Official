@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "digitxevents.com",
       },
+      {
+        protocol: "https",
+        hostname: "digitx-storage.blr1.cdn.digitaloceanspaces.com",
+      },
     ],
   },
   // Enable experimental features for better geo-location support

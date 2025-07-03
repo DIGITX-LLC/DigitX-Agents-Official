@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     name: "Amit Das",
     role: "CEO & Founder",
     specialization: "Silicon Valley Software Engineering",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/1-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/1_20250703_150121_0000.png",
     badge: "Silicon Valley Veteran",
     bio: "Silicon Valley talent with over 15 years in software development. Leading DigitX's mission to revolutionize business automation through AI Agent OS.",
     skills: ["Software Development", "AI Strategy", "Product Vision", "Silicon Valley Leadership"],
@@ -66,7 +66,7 @@ const teamMembers: TeamMember[] = [
     name: "Sajib Pal",
     role: "Director of Engineering",
     specialization: "AI Architecture & Engineering",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/3-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/3_20250703_150121_0002.png",
     badge: "Technical Mastermind",
     bio: "Architect of our AI Agent OS platform. Expert in distributed systems, machine learning, and scalable cloud infrastructure.",
     skills: ["AI/ML Engineering", "System Architecture", "Cloud Computing", "DevOps"],
@@ -80,7 +80,7 @@ const teamMembers: TeamMember[] = [
     name: "Arnab Biswas",
     role: "Director of Products",
     specialization: "Product Strategy & Innovation",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/2-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/2_20250703_150121_0001.png",
     badge: "Product Visionary",
     bio: "Leading product innovation and strategic roadmap for AI Agent OS. Expert in product management, user experience, and market positioning.",
     skills: ["Product Strategy", "Innovation Management", "Market Analysis", "User Experience"],
@@ -94,7 +94,7 @@ const teamMembers: TeamMember[] = [
     name: "Jesan Chowdhury",
     role: "Assistant Director of Product Sales",
     specialization: "Product Sales & Business Development",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/4-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/4_20250703_150121_0003.png",
     badge: "Sales Expert",
     bio: "Driving product sales growth and building strategic partnerships. Expert in sales processes, customer acquisition, and business development.",
     skills: ["Product Sales", "Business Development", "Customer Acquisition", "Sales Strategy"],
@@ -108,7 +108,7 @@ const teamMembers: TeamMember[] = [
     name: "Trijeet Halder",
     role: "Assistant Director of Engineering",
     specialization: "Software Engineering & Architecture",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/5-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/5_20250703_150121_0004.png",
     badge: "Engineering Expert",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
     skills: ["Software Engineering", "System Architecture", "Technical Leadership", "Backend Development"],
@@ -122,7 +122,7 @@ const teamMembers: TeamMember[] = [
     name: "Al Amin",
     role: "Senior AI Engineer",
     specialization: "AI Development & Machine Learning",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/6-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/6_20250703_150121_0005.png",
     badge: "AI Specialist",
     bio: "Expert in AI development and machine learning solutions. Specializing in building intelligent systems and advanced AI algorithms.",
     skills: ["AI Development", "Machine Learning", "Neural Networks", "Algorithm Design"],
@@ -135,7 +135,7 @@ const teamMembers: TeamMember[] = [
     name: "Limu Zaman",
     role: "AI UI/UX Designer",
     specialization: "AI Interface Design & User Experience",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/7-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/7_20250703_150121_0006.png",
     badge: "Design Innovator",
     bio: "Creating intuitive AI-powered interfaces and exceptional user experiences. Expert in designing complex AI systems with human-centered approaches.",
     skills: ["AI Interface Design", "User Experience", "Interaction Design", "Design Systems"],
@@ -149,7 +149,7 @@ const teamMembers: TeamMember[] = [
     name: "Priya Ghosh",
     role: "People Operation and Management Director",
     specialization: "Human Resources & Operations",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/8-scaled.png",
+    image: "https://digitx-storage.blr1.cdn.digitaloceanspaces.com/Assets/onebrain-assets/8_20250703_150121_0007.png",
     badge: "People Leader",
     bio: "Leading people operations and driving organizational excellence. Expert in talent management, employee engagement, and operational efficiency.",
     skills: ["Human Resources", "Operations Management", "Talent Development", "Organizational Strategy"],
@@ -252,18 +252,18 @@ export const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="container lg:w-[75%] py-24 sm:py-32">
-      <div className="text-center mb-8">
-        <h2 className="text-lg text-yellow-400 text-center mb-2 tracking-wider">
+    <section id="team" className="container w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-sm sm:text-base lg:text-lg text-yellow-400 text-center mb-2 tracking-wider font-medium">
           AI Agents
         </h2>
 
-        <h2 className="text-3xl md:text-4xl text-center font-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold leading-tight">
           Our AI Agent Types
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
         {agentTypes.map(
           (
             { icon, name, description, capabilities, useCases, badge },
@@ -273,47 +273,48 @@ export const TeamSection = () => {
               key={index}
               className="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-400/20"
             >
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
+              <CardHeader className="text-center pb-3 sm:pb-4 px-4 sm:px-6 pt-4 sm:pt-6">
+                <div className="mx-auto mb-3 sm:mb-4 p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center">
                   <Icon
                     name={icon as keyof typeof icons}
-                    size={28}
+                    size={20}
+                    className="sm:w-7 sm:h-7"
                     color="black"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Badge className="bg-yellow-400/10 text-yellow-400 hover:bg-yellow-400/20">
+                  <Badge className="bg-yellow-400/10 text-yellow-400 hover:bg-yellow-400/20 text-xs px-2 py-1">
                     {badge}
                   </Badge>
-                  <CardTitle className="text-lg">
+                  <CardTitle className="text-base sm:text-lg leading-tight">
                     {name}
-                </CardTitle>
+                  </CardTitle>
                 </div>
               </CardHeader>
 
-              <CardContent className="flex flex-col flex-1 space-y-4">
-                <p className="text-muted-foreground text-center">
+              <CardContent className="flex flex-col flex-1 space-y-3 sm:space-y-4 px-4 sm:px-6 pb-4 sm:pb-6">
+                <p className="text-sm sm:text-base text-muted-foreground text-center leading-relaxed">
                   {description}
                 </p>
                 
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-semibold text-sm mb-2 text-yellow-400">Key Capabilities:</h4>
+                    <h4 className="font-semibold text-xs sm:text-sm mb-2 text-yellow-400">Key Capabilities:</h4>
                     <ul className="text-xs space-y-1">
                       {capabilities.map((capability, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2 flex-shrink-0"></div>
-                          {capability}
+                        <li key={idx} className="flex items-start">
+                          <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2 flex-shrink-0 mt-1.5"></div>
+                          <span className="leading-relaxed">{capability}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-sm mb-2 text-yellow-400">Use Cases:</h4>
-                    <div className="flex flex-wrap gap-1">
+                    <h4 className="font-semibold text-xs sm:text-sm mb-2 text-yellow-400">Use Cases:</h4>
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
                       {useCases.map((useCase, idx) => (
-                        <Badge key={idx} variant="outline" className="text-xs">
+                        <Badge key={idx} variant="outline" className="text-xs px-2 py-1">
                           {useCase}
                         </Badge>
                       ))}
@@ -331,27 +332,27 @@ export const TeamSection = () => {
 
 export const DreamTeamSection = () => {
   return (
-    <section className="container py-24 sm:py-32">
+    <section className="container w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
       <MotionDiv
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center mb-16"
+        className="text-center mb-12 sm:mb-16"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
           Meet The{" "}
           <span className="text-transparent bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text">
             Dream Team
           </span>
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
           The brilliant minds behind DigitX AI Agent OS. Our diverse team of experts from our US headquarters is revolutionizing how businesses interact with artificial intelligence.
         </p>
       </MotionDiv>
 
       <MotionDiv
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -376,15 +377,15 @@ export const DreamTeamSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center mt-16"
+        className="text-center mt-12 sm:mt-16"
       >
-        <div className="bg-gradient-to-r from-yellow-400/10 to-amber-500/10 rounded-lg p-8 border border-yellow-400/20">
-          <h3 className="text-2xl font-bold mb-4">
+        <div className="bg-gradient-to-r from-yellow-400/10 to-amber-500/10 rounded-lg p-4 sm:p-6 lg:p-8 border border-yellow-400/20 mx-4 sm:mx-0">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
             <span className="text-transparent bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text">
               Working from Bangladesh for Global Companies from 2019
             </span>
           </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Since 2019, our talented team based in Bangladesh has been delivering world-class AI solutions to global companies. We combine local expertise with international standards, building cutting-edge technology that serves businesses worldwide.
           </p>
         </div>
