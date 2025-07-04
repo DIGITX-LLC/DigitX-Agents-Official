@@ -38,7 +38,7 @@ export function FallbackImage({
     if (!hasError) {
       setHasError(true);
       setImgSrc(fallbackSrc);
-      console.warn(`FallbackImage: Failed to load image "${src}", using fallback "${fallbackSrc}"`);
+      console.warn(`FallbackImage: Failed to load image "${src}", using fallback "${fallbackSrc}". This could be due to a 504 timeout error or missing image.`);
     }
   };
 
@@ -53,7 +53,7 @@ export function FallbackImage({
         console.warn(`FallbackImage: Image "${src}" took too long to load, using fallback`);
         handleError();
       }
-    }, 10000); // 10 second timeout
+    }, 5000); // 5 second timeout (reduced from 10 seconds)
 
     return () => clearTimeout(timeout);
   }, [isLoading, hasError, src]);
