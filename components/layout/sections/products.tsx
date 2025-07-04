@@ -60,7 +60,7 @@ export const ProductsSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="lg:col-span-2"
         >
-          <div className="space-y-6">
+          <div className="space-y-6 mt-5">
             <Badge 
               variant="outline" 
               className="border-yellow-400/50 text-yellow-400 bg-yellow-400/10 px-4 py-2"

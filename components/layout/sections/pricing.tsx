@@ -103,7 +103,7 @@ export const PricingSection = () => {
   };
 
   return (
-    <section className="container py-24 sm:py-32">
+    <section id="pricing" className="container py-24 sm:py-32">
       <MotionDiv
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
