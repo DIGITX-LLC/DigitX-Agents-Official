@@ -15,7 +15,7 @@ import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export default function Home() {
   return (
-    <>
+    <main className="relative">
       <HeroSection />
       <SponsorsSection />
       <BenefitsSection />
@@ -28,6 +28,6 @@ export default function Home() {
       <ContactSection />
       <FAQSection />
       <FooterSection />
-    </>
+    </main>
   );
 }

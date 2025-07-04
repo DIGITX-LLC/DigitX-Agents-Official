@@ -51,9 +51,13 @@ export function FallbackImage({
   }
 
   return (
-    <div className={cn("relative overflow-hidden", className)}>
+    <div className={cn(
+      "relative overflow-hidden",
+      fill ? "w-full h-full" : "",
+      className
+    )}>
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md flex items-center justify-center">
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md flex items-center justify-center z-10">
           <div className="w-8 h-8 bg-gray-300 rounded-full animate-bounce"></div>
         </div>
       )}
@@ -69,12 +73,13 @@ export function FallbackImage({
         className={cn(
           "transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",
-          hasError ? "filter grayscale" : ""
+          hasError ? "filter grayscale" : "",
+          fill ? "object-cover" : ""
         )}
         {...props}
       />
       {hasError && (
-        <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+        <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-20">
           Fallback
         </div>
       )}

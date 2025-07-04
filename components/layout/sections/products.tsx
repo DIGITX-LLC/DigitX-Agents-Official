@@ -92,7 +92,7 @@ export const ProductsSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="relative lg:col-span-3"
         >
-          <div style={{ height: '800px', position: 'relative', overflow: 'visible' }}>
+          <div className="relative w-full h-[800px] overflow-visible">
             <CardSwap
                width={700}
                height={500}
@@ -163,8 +163,8 @@ export const ProductsSection = () => {
                     </div>
                     
                     <div className="flex flex-col h-full">
-                      {/* Product Image - Made Larger */}
-                      <div className="relative h-48 overflow-hidden">
+                      {/* Product Image - Fixed height container */}
+                      <div className="relative w-full h-48 overflow-hidden">
                         <FallbackImage 
                           src={product.image} 
                           alt={product.name}

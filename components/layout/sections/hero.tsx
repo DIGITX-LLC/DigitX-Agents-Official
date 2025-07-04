@@ -19,7 +19,7 @@ export const HeroSection = () => {
   const glow = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.6]);
 
   return (
-    <section ref={ref} className="container w-full px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="relative container w-full px-4 sm:px-6 lg:px-8">
       <div className="grid place-items-center lg:max-w-screen-xl gap-6 sm:gap-8 mx-auto pt-16 pb-4 sm:pt-20 md:pt-32 md:pb-8">
         <MotionDiv 
           className="text-center space-y-6 sm:space-y-8"
@@ -234,14 +234,14 @@ export const HeroSection = () => {
               {/* Workflow Visualization */}
               <div className="bg-gray-800/60 rounded-lg p-4 sm:p-6 border border-gray-700/30">
                 <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Workflow Pipeline</h3>
-                <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+                <div className="flex flex-row items-center justify-between">
                   {[
                     { step: "Data Input", status: "complete" },
                     { step: "AI Processing", status: "active" },
                     { step: "Analysis", status: "pending" },
                     { step: "Output", status: "pending" }
                   ].map((step, i) => (
-                    <div key={i} className="flex items-center w-full sm:w-auto">
+                    <div key={i} className="flex items-center">
                       <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 ${
                         step.status === 'complete' ? 'bg-green-400 border-green-400' :
                         step.status === 'active' ? 'bg-gradient-to-r from-yellow-400 to-amber-500 border-amber-500 animate-pulse' :
@@ -249,7 +249,7 @@ export const HeroSection = () => {
                       }`}>
                         <span className="text-xs sm:text-sm font-bold text-black">{i + 1}</span>
                       </div>
-                      <div className="ml-3 text-center sm:text-left">
+                      <div className="ml-3 text-left">
                         <p className="text-xs sm:text-sm text-white">{step.step}</p>
                         <p className={`text-xs ${
                           step.status === 'complete' ? 'text-green-400' :
@@ -257,8 +257,7 @@ export const HeroSection = () => {
                           'text-gray-500'
                         }`}>{step.status}</p>
                       </div>
-                      {i < 3 && <div className="hidden sm:block w-6 md:w-8 h-px bg-gray-600 ml-4"></div>}
-                      {i < 3 && <div className="sm:hidden w-full h-px bg-gray-600 mt-2"></div>}
+                      {i < 3 && <div className="w-6 md:w-8 h-px bg-gray-600 ml-4"></div>}
                     </div>
                   ))}
                 </div>
