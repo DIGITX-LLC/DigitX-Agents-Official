@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     name: "Amit Das",
     role: "CEO & Founder",
     specialization: "Silicon Valley Software Engineering",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/1_20250703_150121_0000-scaled.png",
+    image: "/amit.png", // Using local fallback until external images are properly configured
     badge: "Silicon Valley Veteran",
     bio: "Silicon Valley talent with over 15 years in software development. Leading DigitX's mission to revolutionize business automation through AI Agent OS.",
     skills: ["Software Development", "AI Strategy", "Product Vision", "Silicon Valley Leadership"],
@@ -66,7 +66,7 @@ const teamMembers: TeamMember[] = [
     name: "Sajib Pal",
     role: "Director of Engineering",
     specialization: "AI Architecture & Engineering",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/3_20250703_150121_0002-scaled.png",
+    image: "/sajib.png", // Using local fallback until external images are properly configured
     badge: "Technical Mastermind",
     bio: "Architect of our AI Agent OS platform. Expert in distributed systems, machine learning, and scalable cloud infrastructure.",
     skills: ["AI/ML Engineering", "System Architecture", "Cloud Computing", "DevOps"],
@@ -80,7 +80,7 @@ const teamMembers: TeamMember[] = [
     name: "Arnab Biswas",
     role: "Director of Products",
     specialization: "Product Strategy & Innovation",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/2_20250703_150121_0001-scaled.png",
+    image: "/arnab.png", // Using local fallback until external images are properly configured
     badge: "Product Visionary",
     bio: "Leading product innovation and strategic roadmap for AI Agent OS. Expert in product management, user experience, and market positioning.",
     skills: ["Product Strategy", "Innovation Management", "Market Analysis", "User Experience"],
@@ -94,7 +94,7 @@ const teamMembers: TeamMember[] = [
     name: "Jesan Chowdhury",
     role: "Assistant Director of Product Sales",
     specialization: "Product Sales & Business Development",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/4_20250703_150121_0003-scaled.png",
+    image: "jesan.png", // Using local fallback until external images are properly configured
     badge: "Sales Expert",
     bio: "Driving product sales growth and building strategic partnerships. Expert in sales processes, customer acquisition, and business development.",
     skills: ["Product Sales", "Business Development", "Customer Acquisition", "Sales Strategy"],
@@ -108,7 +108,7 @@ const teamMembers: TeamMember[] = [
     name: "Trijeet Halder",
     role: "Assistant Director of Engineering",
     specialization: "Software Engineering & Architecture",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/5_20250703_150121_0004-scaled.png",
+    image: "trijeet.png", // Using local fallback until external images are properly configured
     badge: "Engineering Expert",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
     skills: ["Software Engineering", "System Architecture", "Technical Leadership", "Backend Development"],
@@ -122,7 +122,7 @@ const teamMembers: TeamMember[] = [
     name: "Al Amin",
     role: "Senior AI Engineer",
     specialization: "AI Development & Machine Learning",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/6_20250703_150121_0005-scaled.png",
+    image: "alamin.png", // Using local fallback until external images are properly configured
     badge: "AI Specialist",
     bio: "Expert in AI development and machine learning solutions. Specializing in building intelligent systems and advanced AI algorithms.",
     skills: ["AI Development", "Machine Learning", "Neural Networks", "Algorithm Design"],
@@ -135,7 +135,7 @@ const teamMembers: TeamMember[] = [
     name: "Limu Zaman",
     role: "AI UI/UX Designer",
     specialization: "AI Interface Design & User Experience",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/7_20250703_150121_0006-scaled.png",
+    image: "/limu.png", // Using local fallback until external images are properly configured
     badge: "Design Innovator",
     bio: "Creating intuitive AI-powered interfaces and exceptional user experiences. Expert in designing complex AI systems with human-centered approaches.",
     skills: ["AI Interface Design", "User Experience", "Interaction Design", "Design Systems"],
@@ -149,7 +149,7 @@ const teamMembers: TeamMember[] = [
     name: "Priya Ghosh",
     role: "People Operation and Management Director",
     specialization: "Human Resources & Operations",
-    image: "https://digitxevents.com/wp-content/uploads/2025/07/8_20250703_150121_0007-scaled.png",
+    image: "/priya.png", // Using local fallback until external images are properly configured
     badge: "People Leader",
     bio: "Leading people operations and driving organizational excellence. Expert in talent management, employee engagement, and operational efficiency.",
     skills: ["Human Resources", "Operations Management", "Talent Development", "Organizational Strategy"],

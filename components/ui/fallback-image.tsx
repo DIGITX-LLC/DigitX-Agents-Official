@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -38,12 +38,25 @@ export function FallbackImage({
     if (!hasError) {
       setHasError(true);
       setImgSrc(fallbackSrc);
+      console.warn(`FallbackImage: Failed to load image "${src}", using fallback "${fallbackSrc}"`);
     }
   };
 
   const handleLoad = () => {
     setIsLoading(false);
   };
+
+  // Add timeout for slow-loading images
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (isLoading && !hasError) {
+        console.warn(`FallbackImage: Image "${src}" took too long to load, using fallback`);
+        handleError();
+      }
+    }, 10000); // 10 second timeout
+
+    return () => clearTimeout(timeout);
+  }, [isLoading, hasError, src]);
 
   // Validation: either fill should be true OR width and height should be provided
   if (!fill && (!width || !height)) {

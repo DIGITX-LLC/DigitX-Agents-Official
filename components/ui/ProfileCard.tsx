@@ -39,6 +39,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
               height={400}
               fallbackSrc="/demo-img.jpg"
               quality={75}
+              priority={true}
             />
             {showUserInfo && (
               <div className="pc-user-info">
@@ -51,6 +52,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                       height={40}
                       fallbackSrc="/demo-img.jpg"
                       quality={60}
+                      priority={false}
                     />
                   </div>
                   <div className="pc-user-text">
