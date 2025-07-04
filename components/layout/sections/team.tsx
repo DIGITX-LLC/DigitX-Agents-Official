@@ -94,7 +94,7 @@ const teamMembers: TeamMember[] = [
     name: "Jesan Chowdhury",
     role: "Assistant Director of Product Sales",
     specialization: "Product Sales & Business Development",
-    image: "jesan.png", // Using local fallback until external images are properly configured
+    image: "/jesan.png", // Using local fallback until external images are properly configured
     badge: "Sales Expert",
     bio: "Driving product sales growth and building strategic partnerships. Expert in sales processes, customer acquisition, and business development.",
     skills: ["Product Sales", "Business Development", "Customer Acquisition", "Sales Strategy"],
@@ -108,7 +108,7 @@ const teamMembers: TeamMember[] = [
     name: "Trijeet Halder",
     role: "Assistant Director of Engineering",
     specialization: "Software Engineering & Architecture",
-    image: "trijeet.png", // Using local fallback until external images are properly configured
+    image: "/trijeet.png", // Using local fallback until external images are properly configured
     badge: "Engineering Expert",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
     skills: ["Software Engineering", "System Architecture", "Technical Leadership", "Backend Development"],
@@ -122,7 +122,7 @@ const teamMembers: TeamMember[] = [
     name: "Al Amin",
     role: "Senior AI Engineer",
     specialization: "AI Development & Machine Learning",
-    image: "alamin.png", // Using local fallback until external images are properly configured
+    image: "/alamin.png", // Using local fallback until external images are properly configured
     badge: "AI Specialist",
     bio: "Expert in AI development and machine learning solutions. Specializing in building intelligent systems and advanced AI algorithms.",
     skills: ["AI Development", "Machine Learning", "Neural Networks", "Algorithm Design"],
