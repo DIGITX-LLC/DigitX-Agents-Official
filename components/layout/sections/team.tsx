@@ -111,24 +111,11 @@ const teamMembers: TeamMember[] = [
     image: "/trijeet.png", // Using local fallback until external images are properly configured
     badge: "Engineering Expert",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
-    skills: ["Software Engineering", "System Architecture", "Technical Leadership", "Backend Development"],
+    skills: ["Software Engineering", "System Architecture", "Technical Leadership", "AI Development"],
     social: {
       linkedin: "https://linkedin.com/in/shimantohalder",
       github: "https://github.com/shimantohalder",
       email: "shimanto@digitxgroup.com"
-    }
-  },
-  {
-    name: "Al Amin",
-    role: "Senior AI Engineer",
-    specialization: "AI Development & Machine Learning",
-    image: "/alamin.png", // Using local fallback until external images are properly configured
-    badge: "AI Specialist",
-    bio: "Expert in AI development and machine learning solutions. Specializing in building intelligent systems and advanced AI algorithms.",
-    skills: ["AI Development", "Machine Learning", "Neural Networks", "Algorithm Design"],
-    social: {
-      linkedin: "https://linkedin.com/in/alamin",
-      email: "alamin@digitxgroup.com"
     }
   },
   {
