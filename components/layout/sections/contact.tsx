@@ -82,33 +82,14 @@ export const ContactSection = () => {
               <div>44-70 21st St, Long Island City, NY 11101</div>
             </div>
 
-            <div>
-              <div className="flex gap-2 mb-1">
-                <Building2 />
-                <div className="font-bold">Bangladesh Office</div>
-              </div>
-
-              <div>Level 8, MTB Building, Software Technology Park,</div>
-              <div>Jashore-7400, Bangladesh</div>
-            </div>
-
-            <div>
-              <div className="flex gap-2 mb-1">
-                <Phone />
-                <div className="font-bold">US Sales Team</div>
-              </div>
-
-              <div>(516) 847-4880</div>
-            </div>
-
-            <div>
+            {/* <div>
               <div className="flex gap-2 mb-1">
                 <Phone />
                 <div className="font-bold">Bangladesh Contact</div>
               </div>
 
               <div>+880 1988121220</div>
-            </div>
+            </div> */}
 
             <div>
               <div className="flex gap-2 mb-1">
@@ -126,7 +107,7 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <div>Monday - Friday: 9AM - 6PM PST</div>
+                <div>Monday - Friday: 9AM - 6PM EST</div>
                 <div>24/7 Enterprise Support Available</div>
               </div>
             </div>
@@ -248,7 +229,6 @@ export const ContactSection = () => {
                             {...field}
                           />
                         </FormControl>
-
                         <FormMessage />
                       </FormItem>
                     )}
