@@ -12,78 +12,32 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Bot",
-    title: "Autonomous AI Agents",
-    description:
-      "Deploy intelligent agents that work 24/7, handling complex tasks, making decisions, and learning from interactions without human intervention.",
-  },
-  {
-    icon: "Workflow",
-    title: "Seamless Workflow Integration",
-    description:
-      "Connect with 500+ business tools and platforms. Our AI agents integrate seamlessly with your existing tech stack and processes.",
-  },
-  {
-    icon: "TrendingUp",
-    title: "10x Productivity Boost",
-    description:
-      "Automate repetitive tasks, accelerate decision-making, and free your team to focus on strategic initiatives that drive real business value.",
-  },
-  {
-    icon: "Shield",
-    title: "Enterprise-Grade Security",
-    description:
-      "Built with SOC 2 compliance, end-to-end encryption, and advanced security protocols to protect your data and business processes.",
-  },
-];
-
-// Bangladesh-specific version
-const bangladeshBenefitList: BenefitsProps[] = [
-  {
     icon: "Brain",
-    title: "OneBrain AI for Bangladesh",
+    title: "Comprehensive AI Ecosystem",
     description:
-      "Advanced AI decision-making platform specifically designed for Bangladesh's unique business ecosystem, helping local companies compete globally with intelligent automation.",
+      "Access a full suite of AI tools through OneBrain AI, from decision-making engines to autonomous agents, all under one roof.",
   },
   {
     icon: "TestTube",
-    title: "Re-test Quality Assurance",
+    title: "Flawless Software Delivery",
     description:
-      "Revolutionary testing platform ensuring software quality for Bangladesh's rapidly growing tech sector, reducing bugs by 90% and accelerating time-to-market.",
-  },
-  {
-    icon: "Calendar",
-    title: "DigitX Events Bangladesh",
-    description:
-      "Premier AI and tech event platform connecting Bangladesh's innovators, entrepreneurs, and tech enthusiasts to drive digital transformation nationwide.",
+      "Leverage our Re-Test platform to automate quality assurance, ensuring your software is bug-free and market-ready faster than ever.",
   },
   {
     icon: "Users",
-    title: "Local Community Impact",
+    title: "Global Talent Development",
     description:
-      "Empowering Bangladesh's tech community in Dhaka, Chittagong, and nationwide with cutting-edge AI tools and fostering innovation across industries.",
+      "Upskill your workforce with MentorPath AI corporate training programs, designed to keep your team at the forefront of technology.",
   },
   {
-    icon: "Zap",
-    title: "Lightning-Fast Deployment",
+    icon: "Workflow",
+    title: "End-to-End Automation",
     description:
-      "Deploy AI solutions in minutes, not months. Optimized for Bangladesh's infrastructure with local server support and 99.9% uptime guarantee.",
-  },
-  {
-    icon: "ShieldCheck",
-    title: "Bangladesh Data Security",
-    description:
-      "Enterprise-grade security that meets Bangladesh data protection regulations and local compliance requirements with SOC 2 certification.",
+      "From simple tasks to complex enterprise workflows, our automation solutions provide the scalability your business needs.",
   },
 ];
 
-export const BenefitsSection = ({ isBangladesh = false }: { isBangladesh?: boolean }) => {
-  const currentBenefitList = isBangladesh ? bangladeshBenefitList : benefitList;
-  const sectionTitle = isBangladesh ? "Why Choose DigitX Bangladesh" : "Why Choose DigitX";
-  const sectionSubtitle = isBangladesh 
-    ? "AI solutions specially designed for Bangladesh's market that will take your business to the next level" 
-    : "Discover how our AI Agent OS transforms businesses across Bangladesh";
-
+export const BenefitsSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -112,31 +66,32 @@ export const BenefitsSection = ({ isBangladesh = false }: { isBangladesh?: boole
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {currentBenefitList.map(({ icon, title, description }, index) => (
+      {benefitList.map(({ icon, title, description }, index) => (
         <MotionDiv
           key={title}
           variants={itemVariants}
         >
           <Card
-            className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number h-full border-border hover:border-yellow-400/20"
+            className="bg-white/5 border-white/10 hover:bg-white/10 hover:border-yellow-500/30 transition-all duration-300 group/number h-full backdrop-blur-sm"
           >
           <CardHeader>
-            <div className="flex justify-between">
-              <Icon
-                name={icon as keyof typeof icons}
-                size={32}
-                color="currentColor"
-                className="mb-6 text-yellow-400"
-              />
-              <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-yellow-400/30">
+            <div className="flex justify-between items-start">
+              <div className="p-3 rounded-xl bg-yellow-500/10 text-yellow-400 mb-4 group-hover/number:bg-yellow-500/20 transition-colors">
+                <Icon
+                  name={icon as keyof typeof icons}
+                  size={28}
+                  color="currentColor"
+                />
+              </div>
+              <span className="text-5xl font-bold text-white/5 transition-all duration-500 group-hover/number:text-yellow-500/10 select-none">
                 0{index + 1}
               </span>
             </div>
 
-            <CardTitle className="text-foreground group-hover/number:text-yellow-400 transition-colors duration-300">{title}</CardTitle>
+            <CardTitle className="text-xl font-semibold text-foreground group-hover/number:text-yellow-400 transition-colors duration-300">{title}</CardTitle>
           </CardHeader>
 
-            <CardContent className="text-muted-foreground">
+            <CardContent className="text-muted-foreground leading-relaxed">
               {description}
             </CardContent>
           </Card>
@@ -154,23 +109,20 @@ export const BenefitsSection = ({ isBangladesh = false }: { isBangladesh?: boole
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-lg text-yellow-400 mb-2 tracking-wider font-semibold">{sectionTitle}</h2>
+          <h2 className="text-lg text-yellow-400 mb-4 tracking-widest font-semibold uppercase">Strategic Advantage</h2>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {isBangladesh ? "DigitX Bangladesh" : "DigitX AI Solutions"}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            Building the Future <br />
+            <span className="text-transparent bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text">
+              Together
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            {sectionSubtitle}
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            We deliver more than just technology. We provide the ecosystem, expertise, and vision to help you lead in a digital-first world.
           </p>
         </MotionDiv>
 
-        {isBangladesh ? (
-          <ScrollArea className="h-[600px] w-full rounded-md border border-yellow-400/20 p-4">
-            {benefitsContent}
-          </ScrollArea>
-        ) : (
-          benefitsContent
-        )}
+        {benefitsContent}
       </div>
     </section>
   );

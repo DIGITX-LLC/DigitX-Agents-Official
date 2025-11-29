@@ -11,93 +11,44 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "Brain",
-    title: "Advanced AI Intelligence",
+    icon: "Globe",
+    title: "Global Innovation",
     description:
-      "DigitX AI agents leverage cutting-edge machine learning and natural language processing to understand context and make intelligent decisions.",
-  },
-  {
-    icon: "Zap",
-    title: "Lightning-Fast Deployment",
-    description:
-      "Get your AI agents up and running in minutes, not months. DigitX's no-code platform makes deployment effortless for any business.",
-  },
-  {
-    icon: "Network",
-    title: "Seamless Integration",
-    description:
-      "Connect with 500+ popular business tools, APIs, and databases. DigitX agents work with your existing tech stack.",
-  },
-  {
-    icon: "BarChart3",
-    title: "Real-Time Analytics",
-    description:
-      "Monitor performance, track KPIs, and optimize workflows with DigitX's comprehensive analytics dashboard and reporting tools.",
-  },
-  {
-    icon: "Lock",
-    title: "Enterprise Security",
-    description:
-      "Bank-level security with SOC 2 compliance, end-to-end encryption, and advanced access controls to protect your business data.",
-  },
-  {
-    icon: "Users",
-    title: "Multi-Agent Orchestration",
-    description:
-      "Coordinate multiple AI agents to handle complex workflows with seamless collaboration and intelligent task distribution.",
-  },
-];
-
-// Bangladesh-specific features
-const bangladeshFeatureList: FeaturesProps[] = [
-  {
-    icon: "Brain",
-    title: "OneBrain AI Decision Engine",
-    description:
-      "Advanced AI specifically trained on Bangladesh business patterns, regulations, and market dynamics for superior local decision-making.",
-  },
-  {
-    icon: "TestTube",
-    title: "Re-test Automated QA",
-    description:
-      "Revolutionary testing automation that understands Bangladesh's development practices, reducing testing time by 80% for local teams.",
-  },
-  {
-    icon: "Calendar",
-    title: "DigitX Events Integration",
-    description:
-      "Connect with Bangladesh's largest tech community through our event platform, featuring 50+ monthly events and networking opportunities.",
-  },
-  {
-    icon: "MapPin",
-    title: "Local Infrastructure Support",
-    description:
-      "Optimized for Bangladesh's internet infrastructure with local data centers in Dhaka and Chittagong for ultra-low latency.",
-  },
-  {
-    icon: "Users",
-    title: "Bangladeshi Developer Focused",
-    description:
-      "Built by and for Bangladeshi developers with local language support, time zones, and culturally relevant AI training data.",
+      "We deliver world-class technology solutions that compete on a global scale, driving digital transformation across borders.",
   },
   {
     icon: "ShieldCheck",
-    title: "Bangladesh Compliance Ready",
+    title: "Enterprise Reliability",
     description:
-      "Pre-configured to meet Bangladesh data protection laws, banking regulations, and government compliance requirements.",
+      "Built on a foundation of trust and security, our systems are designed to meet the rigorous demands of enterprise operations.",
+  },
+  {
+    icon: "Zap",
+    title: "Agile Delivery",
+    description:
+      "We believe in rapid iteration and deployment, ensuring our clients stay ahead of the curve with the latest technological advancements.",
+  },
+  {
+    icon: "Users",
+    title: "Expert Teams",
+    description:
+      "Our diverse team of experts brings deep industry knowledge and technical prowess to every project we undertake.",
+  },
+  {
+    icon: "Layers",
+    title: "Scalable Solutions",
+    description:
+      "From startups to Fortune 500s, our products and services are built to scale seamlessly as your business grows.",
+  },
+  {
+    icon: "HeartHandshake",
+    title: "Client-Centric Approach",
+    description:
+      "Your success is our priority. We work closely with you to understand your unique challenges and deliver tailored solutions.",
   },
 ];
 
-export const FeaturesSection = ({ isBangladesh = false }: { isBangladesh?: boolean }) => {
-  const currentFeatureList = isBangladesh ? bangladeshFeatureList : featureList;
-  const sectionTitle = isBangladesh ? "DigitX Bangladesh Features" : "DigitX Features";
-  const sectionHeading = isBangladesh 
-    ? "What Makes DigitX Perfect for Bangladesh" 
-    : "What Makes DigitX AI Agent OS Different";
-  const sectionDescription = isBangladesh
-    ? "Experience AI solutions built specifically for Bangladesh's unique business environment, connecting local innovation with global technology standards."
-    : "Experience the next generation of business automation with DigitX's revolutionary AI Agent Operating System, designed for enterprise-scale innovation.";
-
+export const FeaturesSection = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -128,15 +79,15 @@ export const FeaturesSection = ({ isBangladesh = false }: { isBangladesh?: boole
         className="text-center"
       >
         <h2 className="text-lg text-yellow-400 text-center mb-2 tracking-wider">
-          {sectionTitle}
+          Why Choose DigitX
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          {sectionHeading}
+          Driving Digital Excellence
         </h2>
 
         <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-          {sectionDescription}
+          We combine technical expertise with industry insight to deliver solutions that propel your business into the future.
         </h3>
       </MotionDiv>
 
@@ -147,7 +98,7 @@ export const FeaturesSection = ({ isBangladesh = false }: { isBangladesh?: boole
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {currentFeatureList.map(({ icon, title, description }) => (
+        {featureList.map(({ icon, title, description }) => (
           <MotionDiv 
             key={title}
             variants={itemVariants}

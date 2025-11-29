@@ -26,56 +26,56 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Starter",
-    popular: 0,
-    price: 99,
-    description:
-      "Perfect for small businesses getting started with AI automation. Deploy your first AI agents and workflows.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "Up to 5 AI agents",
-      "10,000 monthly interactions",
-      "Basic workflow templates",
-      "Email support",
-      "50+ integrations",
-      "Real-time analytics dashboard",
-    ],
-  },
-  {
-    title: "Professional",
-    popular: 1,
-    price: 299,
-    description:
-      "Scale your automation with advanced AI agents and enterprise-grade features for growing businesses.",
-    buttonText: "Get Started",
-    benefitList: [
-      "Up to 25 AI agents",
-      "100,000 monthly interactions",
-      "Advanced workflow builder",
-      "Priority support",
-      "500+ integrations",
-      "Custom agent training",
-      "Multi-team collaboration",
-      "Advanced analytics & reporting",
-    ],
-  },
-  {
-    title: "Enterprise",
+    title: "Startup & MVP",
     popular: 0,
     price: 999,
     description:
-      "Unlimited AI agents and workflows with enterprise security, compliance, and dedicated support.",
+      "Rapid prototyping and MVP development for startups looking to launch fast and valid ideas.",
+    buttonText: "Get a Quote",
+    benefitList: [
+      "MVP Development",
+      "Core Feature Implementation",
+      "Basic UI/UX Design",
+      "Cloud Setup",
+      "1 Month Support",
+      "Agile Development",
+    ],
+  },
+  {
+    title: "Growth & Scale",
+    popular: 1,
+    price: 2499,
+    description:
+      "Comprehensive development and scaling services for growing businesses with expanding needs.",
+    buttonText: "Partner with Us",
+    benefitList: [
+      "Full-Stack Development",
+      "Scalable Architecture",
+      "Advanced UI/UX",
+      "QA & Testing (Re-Test)",
+      "3 Months Support",
+      "Performance Optimization",
+      "Integration Services",
+      "Dedicated Team",
+    ],
+  },
+  {
+    title: "Enterprise Transformation",
+    popular: 0,
+    price: 4999,
+    description:
+      "End-to-end digital transformation, custom AI solutions, and dedicated enterprise support.",
     buttonText: "Contact Sales",
     benefitList: [
-      "Unlimited AI agents",
-      "Unlimited interactions",
-      "Custom agent development",
-      "24/7 dedicated support",
-      "All integrations",
-      "SOC 2 compliance",
-      "On-premise deployment",
-      "Advanced security controls",
-      "Custom SLA agreements",
+      "Custom AI Solutions (OneBrain)",
+      "Enterprise Architecture",
+      "Legacy Modernization",
+      "24/7 Dedicated Support",
+      "Security & Compliance",
+      "On-Premise Deployment",
+      "Strategic Consultancy",
+      "Corporate Training",
+      "SLA Guarantees",
     ],
   },
 ];
@@ -112,15 +112,15 @@ export const PricingSection = () => {
         className="text-center"
       >
         <h2 className="text-lg text-yellow-400 text-center mb-2 tracking-wider">
-          DigitX Pricing
+          Partnership Models
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Choose Your AI Agent OS Plan
+          Flexible Engagement Options
         </h2>
 
         <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-          Scale your business automation with DigitX AI Agent OS. Start with our free trial and upgrade as you grow.
+          Whether you need a dedicated team, a fixed-price project, or enterprise consultancy, we have a model that fits your needs.
         </h3>
       </MotionDiv>
 
@@ -154,8 +154,8 @@ export const PricingSection = () => {
                 </CardDescription>
 
                 <div>
-                  <span className="text-3xl font-bold">${price}</span>
-                  <span className="text-muted-foreground"> /month</span>
+                  <span className="text-xl font-bold">Starting at ${price}</span>
+                  <span className="text-muted-foreground"> /mo</span>
                 </div>
               </CardHeader>
 

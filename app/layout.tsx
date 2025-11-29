@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Agent OS - Revolutionary AI Agent Operating System",
-  description: "Transform your business with our comprehensive AI Agent OS. Build, deploy, and manage intelligent AI agents and workflows that automate complex business processes.",
+  title: "DigitX - Enterprise IT Solutions & Innovation",
+  description: "DigitX is a leading provider of enterprise IT solutions, including AI platforms, testing services, corporate training, and autonomous agent systems.",
 };
 
 export default function RootLayout({

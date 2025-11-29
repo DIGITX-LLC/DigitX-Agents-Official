@@ -36,7 +36,11 @@ const formSchema = z.object({
   message: z.string(),
 });
 
-export const ContactSection = () => {
+interface ContactSectionProps {
+  showBangladeshAddress?: boolean;
+}
+
+export const ContactSection = ({ showBangladeshAddress }: ContactSectionProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -82,14 +86,17 @@ export const ContactSection = () => {
               <div>44-70 21st St, Long Island City, NY 11101</div>
             </div>
 
-            {/* <div>
-              <div className="flex gap-2 mb-1">
-                <Phone />
-                <div className="font-bold">Bangladesh Contact</div>
-              </div>
+            {showBangladeshAddress && (
+              <div>
+                <div className="flex gap-2 mb-1">
+                  <Building2 />
+                  <div className="font-bold">Bangladesh Office</div>
+                </div>
 
-              <div>+880 1988121220</div>
-            </div> */}
+                <div>Dhaka, Bangladesh</div>
+                <div>+880 1988121220</div>
+              </div>
+            )}
 
             <div>
               <div className="flex gap-2 mb-1">
@@ -114,8 +121,8 @@ export const ContactSection = () => {
           </div>
         </div>
 
-        <Card className="bg-muted/60 dark:bg-card">
-          <CardHeader className="text-yellow-400 text-2xl">Schedule Your AI Consultations</CardHeader>
+        <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+          <CardHeader className="text-yellow-400 text-2xl font-bold">Schedule Your AI Consultation</CardHeader>
           <CardContent>
             <Form {...form}>
               <form
@@ -128,9 +135,9 @@ export const ContactSection = () => {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem className="w-full">
-                        <FormLabel>First Name</FormLabel>
+                        <FormLabel className="text-muted-foreground">First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Leopoldo" {...field} />
+                          <Input placeholder="John" {...field} className="bg-white/5 border-white/10 focus:border-yellow-400/50 transition-colors" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -141,9 +148,9 @@ export const ContactSection = () => {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem className="w-full">
-                        <FormLabel>Last Name</FormLabel>
+                        <FormLabel className="text-muted-foreground">Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Miranda" {...field} />
+                          <Input placeholder="Doe" {...field} className="bg-white/5 border-white/10 focus:border-yellow-400/50 transition-colors" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -157,12 +164,13 @@ export const ContactSection = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-muted-foreground">Email</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="leomirandadev@gmail.com"
+                            placeholder="john@example.com"
                             {...field}
+                            className="bg-white/5 border-white/10 focus:border-yellow-400/50 transition-colors"
                           />
                         </FormControl>
                         <FormMessage />
@@ -177,17 +185,17 @@ export const ContactSection = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject</FormLabel>
+                        <FormLabel className="text-muted-foreground">Subject</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="bg-white/5 border-white/10 focus:border-yellow-400/50 transition-colors">
                               <SelectValue placeholder="Select a subject" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
+                          <SelectContent className="bg-black/90 border-white/10 backdrop-blur-xl">
                             <SelectItem value="AI Agent Consultation">
                               AI Agent Consultation
                             </SelectItem>
@@ -220,12 +228,12 @@ export const ContactSection = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel className="text-muted-foreground">Message</FormLabel>
                         <FormControl>
                           <Textarea
                             rows={5}
-                            placeholder="Your message..."
-                            className="resize-none"
+                            placeholder="How can we help you?"
+                            className="resize-none bg-white/5 border-white/10 focus:border-yellow-400/50 transition-colors"
                             {...field}
                           />
                         </FormControl>
@@ -235,7 +243,7 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                <Button className="mt-4 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold">Send message</Button>
+                <Button className="mt-4 bg-yellow-500 hover:bg-yellow-400 text-black font-bold transition-all shadow-lg hover:shadow-yellow-500/20">Send Message</Button>
               </form>
             </Form>
           </CardContent>
