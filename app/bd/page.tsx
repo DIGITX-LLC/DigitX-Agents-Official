@@ -1,30 +1,26 @@
-import { BenefitsSection } from "@/components/layout/sections/benefits";
-import { Career } from "@/components/layout/sections/career";
 import { ContactSection } from "@/components/layout/sections/contact";
-import { FAQSection } from "@/components/layout/sections/faq";
-import { FeaturesSection } from "@/components/layout/sections/features";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
-import { PricingSection } from "@/components/layout/sections/pricing";
+import { MissionSection } from "@/components/layout/sections/mission";
 import { ProductsSection } from "@/components/layout/sections/products";
 import { ServicesSection } from "@/components/layout/sections/services";
+import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { DreamTeamSection } from "@/components/layout/sections/team";
-import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "DigitX Bangladesh - AI Agent OS Built for Bangladesh",
-  description: "Revolutionize your business with OneBrain AI, Re-test, and DigitX Events. Advanced AI solutions designed specifically for Bangladesh's growing tech ecosystem and digital transformation.",
+  title: "DigitX Bangladesh - Center of Excellence",
+  description: "Meet our world-class engineering team in Bangladesh, delivering enterprise AI solutions and innovation for the global market.",
   openGraph: {
     type: "website",
-    url: "https://digitx.com/bd",
-    title: "DigitX Bangladesh - AI Agent OS Built for Bangladesh",
-    description: "Revolutionize your business with OneBrain AI, Re-test, and DigitX Events. Advanced AI solutions designed specifically for Bangladesh's growing tech ecosystem.",
+    url: "https://digitxgroup.com/bd",
+    title: "DigitX Bangladesh - Center of Excellence",
+    description: "Meet our world-class engineering team in Bangladesh, delivering enterprise AI solutions and innovation for the global market.",
     images: [
       {
-        url: "https://digitx.com/og-image.jpg",
+        url: "https://digitxgroup.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "DigitX Bangladesh - AI Agent OS",
+        alt: "DigitX Bangladesh Team",
       },
     ],
   },
@@ -32,19 +28,15 @@ export const metadata = {
 
 export default function BangladeshPage() {
   return (
-    <>
+    <main className="relative">
       <HeroSection />
+      <SponsorsSection />
+      <MissionSection />
       <ProductsSection />
-      <BenefitsSection isBangladesh={true} />
-      <FeaturesSection isBangladesh={true} />
-      <ServicesSection isBangladesh={true} />
-      <PricingSection />
-      <TestimonialSection isBangladesh={true} />
-      <Career />
+      <ServicesSection />
       <DreamTeamSection />
-      <ContactSection />
-      <FAQSection />
+      <ContactSection showBangladeshAddress={true} />
       <FooterSection />
-    </>
+    </main>
   );
-} 
+}

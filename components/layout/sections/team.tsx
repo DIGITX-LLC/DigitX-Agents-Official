@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
-import ProfileCard from "@/components/ui/ProfileCard";
+import Link from "next/link";
 
 interface AgentTypeProps {
   icon: string;
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     name: "Amit Das",
     role: "CEO & Founder",
     specialization: "Silicon Valley Software Engineering",
-    image: "/amit.png", // Using local fallback until external images are properly configured
+    image: "/amit.png",
     badge: "Silicon Valley Veteran",
     bio: "Silicon Valley talent with over 15 years in software development. Leading DigitX's mission to revolutionize business automation through AI Agent OS.",
     skills: ["Software Development", "AI Strategy", "Product Vision", "Silicon Valley Leadership"],
@@ -66,7 +66,7 @@ const teamMembers: TeamMember[] = [
     name: "Sajib Pal",
     role: "Director of Engineering",
     specialization: "AI Architecture & Engineering",
-    image: "/sajib.png", // Using local fallback until external images are properly configured
+    image: "/sajib.png",
     badge: "Technical Mastermind",
     bio: "Architect of our AI Agent OS platform. Expert in distributed systems, machine learning, and scalable cloud infrastructure.",
     skills: ["AI/ML Engineering", "System Architecture", "Cloud Computing", "DevOps"],
@@ -80,7 +80,7 @@ const teamMembers: TeamMember[] = [
     name: "Arnab Biswas",
     role: "Director of Products",
     specialization: "Product Strategy & Innovation",
-    image: "/arnab.png", // Using local fallback until external images are properly configured
+    image: "/arnab.png",
     badge: "Product Visionary",
     bio: "Leading product innovation and strategic roadmap for AI Agent OS. Expert in product management, user experience, and market positioning.",
     skills: ["Product Strategy", "Innovation Management", "Market Analysis", "User Experience"],
@@ -94,7 +94,7 @@ const teamMembers: TeamMember[] = [
     name: "Jesan Chowdhury",
     role: "Assistant Director of Product Sales",
     specialization: "Product Sales & Business Development",
-    image: "/jesan.png", // Using local fallback until external images are properly configured
+    image: "/jesan.png",
     badge: "Sales Expert",
     bio: "Driving product sales growth and building strategic partnerships. Expert in sales processes, customer acquisition, and business development.",
     skills: ["Product Sales", "Business Development", "Customer Acquisition", "Sales Strategy"],
@@ -108,7 +108,7 @@ const teamMembers: TeamMember[] = [
     name: "Trijeet Halder",
     role: "Assistant Director of Engineering",
     specialization: "Software Engineering & Architecture",
-    image: "/trijeet.png", // Using local fallback until external images are properly configured
+    image: "/trijeet.png",
     badge: "Engineering Expert",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
     skills: ["Software Engineering", "System Architecture", "Technical Leadership", "AI Development"],
@@ -122,7 +122,7 @@ const teamMembers: TeamMember[] = [
     name: "Limu Zaman",
     role: "AI UI/UX Designer",
     specialization: "AI Interface Design & User Experience",
-    image: "/limu.png", // Using local fallback until external images are properly configured
+    image: "/limu.png",
     badge: "Design Innovator",
     bio: "Creating intuitive AI-powered interfaces and exceptional user experiences. Expert in designing complex AI systems with human-centered approaches.",
     skills: ["AI Interface Design", "User Experience", "Interaction Design", "Design Systems"],
@@ -136,7 +136,7 @@ const teamMembers: TeamMember[] = [
     name: "Priya Ghosh",
     role: "People Operation and Management Director",
     specialization: "Human Resources & Operations",
-    image: "/priya.png", // Using local fallback until external images are properly configured
+    image: "/priya.png",
     badge: "People Leader",
     bio: "Leading people operations and driving organizational excellence. Expert in talent management, employee engagement, and operational efficiency.",
     skills: ["Human Resources", "Operations Management", "Talent Development", "Organizational Strategy"],
@@ -242,11 +242,11 @@ export const TeamSection = () => {
     <section id="team" className="container w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-sm sm:text-base lg:text-lg text-yellow-400 text-center mb-2 tracking-wider font-medium">
-          AI Agents
+          Intelligent Automation
         </h2>
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold leading-tight">
-          Our AI Agent Types
+          Specialized AI Solutions
         </h2>
       </div>
 
@@ -334,27 +334,90 @@ export const DreamTeamSection = () => {
           </span>
         </h2>
         <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
-          The brilliant minds behind DigitX AI Agent OS. Our diverse team of experts from our US headquarters is revolutionizing how businesses interact with artificial intelligence.
+          The brilliant minds behind DigitX. Our diverse team of experts from our Bangladesh Center of Excellence is revolutionizing how businesses interact with artificial intelligence.
         </p>
       </MotionDiv>
 
       <MotionDiv
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 justify-items-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
         {teamMembers.map((member) => (
-          <MotionDiv key={member.name} variants={itemVariants}>
-            <ProfileCard
-              name={member.name}
-              title={member.role}
-              handle={member.name.toLowerCase().replace(' ', '')}
-              status={member.badge}
-              avatarUrl={member.image}
-              showUserInfo={true}
-            />
+          <MotionDiv key={member.name} variants={itemVariants} className="w-full">
+            <div className="group relative w-full overflow-hidden rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+              {/* Image Container */}
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <FallbackImage
+                  src={member.image}
+                  alt={member.name}
+                  width={400}
+                  height={500}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  fallbackSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                />
+                
+                {/* Social Links Overlay */}
+                <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 translate-x-12 group-hover:translate-x-0 transition-transform duration-300 ease-out">
+                  {member.social.linkedin && (
+                    <Link href={member.social.linkedin} target="_blank" className="p-2 bg-black/50 hover:bg-yellow-400 hover:text-black rounded-full backdrop-blur-md transition-colors text-white">
+                      <LinkedinIcon size={18} />
+                    </Link>
+                  )}
+                  {member.social.twitter && (
+                    <Link href={member.social.twitter} target="_blank" className="p-2 bg-black/50 hover:bg-yellow-400 hover:text-black rounded-full backdrop-blur-md transition-colors text-white">
+                      <TwitterIcon size={18} />
+                    </Link>
+                  )}
+                  {member.social.github && (
+                    <Link href={member.social.github} target="_blank" className="p-2 bg-black/50 hover:bg-yellow-400 hover:text-black rounded-full backdrop-blur-md transition-colors text-white">
+                      <GithubIcon size={18} />
+                    </Link>
+                  )}
+                  {member.social.email && (
+                    <Link href={`mailto:${member.social.email}`} className="p-2 bg-black/50 hover:bg-yellow-400 hover:text-black rounded-full backdrop-blur-md transition-colors text-white">
+                      <MailIcon size={18} />
+                    </Link>
+                  )}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-5 relative z-20">
+                <div className="mb-2">
+                  <Badge variant="outline" className="border-yellow-500/30 text-yellow-400 bg-yellow-400/10 text-[10px] uppercase tracking-wider mb-2">
+                    {member.badge}
+                  </Badge>
+                  <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-yellow-400/80 font-medium">
+                    {member.role}
+                  </p>
+                </div>
+                
+                <p className="text-sm text-muted-foreground line-clamp-3 mb-4 group-hover:line-clamp-none transition-all duration-300">
+                  {member.bio}
+                </p>
+
+                {/* Skills Tags */}
+                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
+                  {member.skills.slice(0, 3).map((skill) => (
+                    <span key={skill} className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/5">
+                      {skill}
+                    </span>
+                  ))}
+                  {member.skills.length > 3 && (
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-white/60 border border-white/5">
+                      +{member.skills.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
           </MotionDiv>
         ))}
       </MotionDiv>
@@ -366,13 +429,14 @@ export const DreamTeamSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center mt-12 sm:mt-16"
       >
-        <div className="bg-gradient-to-r from-yellow-400/10 to-amber-500/10 rounded-lg p-4 sm:p-6 lg:p-8 border border-yellow-400/20 mx-4 sm:mx-0">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
+        <div className="bg-gradient-to-r from-yellow-400/5 to-amber-500/5 rounded-2xl p-6 sm:p-10 border border-yellow-400/10 backdrop-blur-sm mx-4 sm:mx-0 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-yellow-500/5 via-transparent to-transparent opacity-50" />
+          <h3 className="relative z-10 text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
             <span className="text-transparent bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text">
               Working from Bangladesh for Global Companies from 2019
             </span>
           </h3>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="relative z-10 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Since 2019, our talented team based in Bangladesh has been delivering world-class AI solutions to global companies. We combine local expertise with international standards, building cutting-edge technology that serves businesses worldwide.
           </p>
         </div>
