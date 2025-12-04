@@ -112,12 +112,13 @@ export const CommunitySection = () => {
                 </div>
                 <Link
                   href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1QS2IclaPa_-oQ1QXscXpR8Tq0IbT5nARDwN6CWZ0SevrEN9ZRD16jHwONc8tBCCLm01UyG6ZZ?gv=true"
-                  target="_blank" // Optional: opens in a new tab
+                  target="_blank" 
                   >
                    <Button className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold py-3">
                      📅 Book Your Free Enterprise Demo
                    </Button>
                 </Link>
+                
                 <div className="flex items-center justify-center space-x-4 text-sm text-muted-foreground">
                   <div className="flex items-center space-x-1">
                     <Clock className="w-4 h-4" />

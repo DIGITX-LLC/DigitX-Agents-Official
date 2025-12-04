@@ -179,11 +179,11 @@ export const PricingSection = () => {
                 ? "w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold"
                 : "w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
                }
-            >
-         <a href="mailto:admin@digitxgroup.com">
-           {buttonText}
-            </a>
-         </Button>
+                 >
+                 <a href="mailto:admin@digitxgroup.com">
+                   {buttonText}
+                  </a>
+                  </Button>
 
 
                 </CardFooter>
