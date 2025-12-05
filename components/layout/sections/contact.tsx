@@ -52,7 +52,10 @@ export const ContactSection = () => {
     const { firstName, lastName, email, subject, message } = values;
     console.log(values);
 
-    const mailToLink = `mailto:admin@digitxgroup.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+    const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
+    )}`;
+    
 
     window.location.href = mailToLink;
   }
@@ -97,7 +100,12 @@ export const ContactSection = () => {
                 <div className="font-bold">Contact Us</div>
               </div>
 
-              <div>admin@digitxgroup.com</div>
+              <div>
+              <a href="mailto:admin@digitxgroup.com" className="text-blue-600 hover:underline">
+               admin@digitxgroup.com
+                   </a>
+                 </div>
+
             </div>
 
             <div>

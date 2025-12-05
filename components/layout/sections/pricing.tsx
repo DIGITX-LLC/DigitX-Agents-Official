@@ -171,16 +171,21 @@ export const PricingSection = () => {
               </CardContent>
 
               <CardFooter>
-                <Button
-                  className={
-                    popular === PopularPlan?.YES
-                      ? "w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold"
-                      : "w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
-                  }
-                  variant={popular === PopularPlan?.YES ? "default" : "outline"}
-                >
-                  {buttonText}
-                </Button>
+              <Button
+              asChild
+              variant={popular === PopularPlan.YES ? "default" : "outline"}
+                 className={
+              popular === PopularPlan.YES
+                ? "w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold"
+                : "w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+               }
+                 >
+                 <a href="mailto:admin@digitxgroup.com">
+                   {buttonText}
+                  </a>
+                  </Button>
+
+
                 </CardFooter>
               </Card>
             </MotionDiv>
