@@ -15,10 +15,7 @@ import type { NextRequest } from 'next/server'
  * based on the visitor's IP address.
  */
 export function middleware(request: NextRequest) {
-  // Temporarily disabled for debugging Digital Ocean deployment issues
-  return NextResponse.next()
-  
-  /* ORIGINAL CODE - RE-ENABLE AFTER FIXING DEPLOYMENT
+  /* ORIGINAL CODE - RE-ENABLED SINCE ISSUE IS PATH-SPECIFIC
   // Get the pathname and country from the request
   const pathname = request.nextUrl.pathname
   const searchParams = request.nextUrl.searchParams
@@ -56,7 +53,6 @@ export function middleware(request: NextRequest) {
   
   // Let other visitors stay on the main site
   return NextResponse.next()
-  */
 }
 
 export const config = {
