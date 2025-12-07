@@ -22,10 +22,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "digitxevents.com",
       },
-      {
-        protocol: "https",
-        hostname: "digitx-storage.blr1.cdn.digitaloceanspaces.com",
-      },
+      // TEMPORARILY DISABLED TO TEST 401 ERROR
+      // {
+      //   protocol: "https",
+      //   hostname: "digitx-storage.blr1.cdn.digitaloceanspaces.com",
+      // },
     ],
     // Disable image optimization in development to avoid 504 errors
     unoptimized: true,
