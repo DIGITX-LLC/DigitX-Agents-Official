@@ -15,7 +15,6 @@ import type { NextRequest } from 'next/server'
  * based on the visitor's IP address.
  */
 export function middleware(request: NextRequest) {
-  /* ORIGINAL CODE - RE-ENABLED SINCE ISSUE IS PATH-SPECIFIC
   // Get the pathname and country from the request
   const pathname = request.nextUrl.pathname
   const searchParams = request.nextUrl.searchParams
@@ -64,6 +63,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
+  ]
 } 
