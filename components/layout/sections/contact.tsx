@@ -55,7 +55,7 @@ export const ContactSection = () => {
     const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
     )}`;
-    
+
 
     window.location.href = mailToLink;
   }
@@ -101,10 +101,19 @@ export const ContactSection = () => {
               </div>
 
               <div>
-              <a href="mailto:admin@digitxgroup.com" className="text-blue-600 hover:underline">
+                {/* <a href="mailto:admin@digitxgroup.com" className="text-blue-600 hover:underline">
                admin@digitxgroup.com
-                   </a>
-                 </div>
+                   </a> */}
+
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=admin@digitxgroup.com"
+                  target="_blank"
+                  className="text-blue-600 hover:underline"
+                  rel="noopener noreferrer"
+                >admin@digitxgroup.com
+                </a>
+
+              </div>
 
             </div>
 
