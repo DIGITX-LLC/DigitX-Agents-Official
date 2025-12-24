@@ -52,12 +52,15 @@ export const ContactSection = () => {
     const { firstName, lastName, email, subject, message } = values;
     console.log(values);
 
-    const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
-    )}`;
+    // const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    //   `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
+    // )}`;
+    // window.location.href = mailToLink;
+
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=admin@digitxgroup.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`)}`;
+    window.open(gmailLink, "_blank");
 
 
-    window.location.href = mailToLink;
   }
 
   return (

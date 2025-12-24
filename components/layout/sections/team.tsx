@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MotionDiv } from "@/components/ui/motion";
 import { FallbackImage } from "@/components/ui/fallback-image";
-import { 
-  LinkedinIcon, 
-  TwitterIcon, 
+import {
+  LinkedinIcon,
+  TwitterIcon,
   GithubIcon,
   MailIcon,
   UserIcon,
@@ -67,7 +67,8 @@ const teamMembers: TeamMember[] = [
     role: "Director of Engineering",
     specialization: "AI Architecture & Engineering",
     image: "/sajib.png", // Using local fallback until external images are properly configured
-    badge: "Technical Mastermind",
+    // badge: "Technical Mastermind",
+    badge: "Testing Strategist",
     bio: "Architect of our AI Agent OS platform. Expert in distributed systems, machine learning, and scalable cloud infrastructure.",
     skills: ["AI/ML Engineering", "System Architecture", "Cloud Computing", "DevOps"],
     social: {
@@ -81,7 +82,8 @@ const teamMembers: TeamMember[] = [
     role: "Director of Products",
     specialization: "Product Strategy & Innovation",
     image: "/arnab.png", // Using local fallback until external images are properly configured
-    badge: "Product Visionary",
+    // badge: "Product Visionary",
+    badge: "Operations Leader",
     bio: "Leading product innovation and strategic roadmap for AI Agent OS. Expert in product management, user experience, and market positioning.",
     skills: ["Product Strategy", "Innovation Management", "Market Analysis", "User Experience"],
     social: {
@@ -94,8 +96,9 @@ const teamMembers: TeamMember[] = [
     name: "Jesan Chowdhury",
     role: "Assistant Director of Product Sales",
     specialization: "Product Sales & Business Development",
-    image: "/jesan.png", // Using local fallback until external images are properly configured
-    badge: "Sales Expert",
+    image: "/jesanChowdhury.png", // Using local fallback until external images are properly configured
+    // badge: "Sales Expert",
+    badge: "Sales Strategist",
     bio: "Driving product sales growth and building strategic partnerships. Expert in sales processes, customer acquisition, and business development.",
     skills: ["Product Sales", "Business Development", "Customer Acquisition", "Sales Strategy"],
     social: {
@@ -105,11 +108,27 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
+    name: "Limu Zaman",
+    role: "AI UI/UX Designer",
+    specialization: "AI Interface Design & User Experience",
+    image: "/limu.png", // Using local fallback until external images are properly configured
+    // badge: "Design Innovator",
+    badge: "Product Engineering Lead",
+    bio: "Creating intuitive AI-powered interfaces and exceptional user experiences. Expert in designing complex AI systems with human-centered approaches.",
+    skills: ["AI Interface Design", "User Experience", "Interaction Design", "Design Systems"],
+    social: {
+      linkedin: "https://linkedin.com/in/limuzaman",
+      twitter: "https://twitter.com/limuzaman",
+      email: "limu@digitxgroup.com"
+    }
+  },
+  {
     name: "Trijeet Halder",
     role: "Assistant Director of Engineering",
     specialization: "Software Engineering & Architecture",
     image: "/trijeet.png", // Using local fallback until external images are properly configured
-    badge: "Engineering Expert",
+    // badge: "Engineering Expert",
+    badge: "Engineering Maestro",
     bio: "Building robust software solutions and engineering excellence. Expert in software architecture, system design, and technical leadership.",
     skills: ["Software Engineering", "System Architecture", "Technical Leadership", "AI Development"],
     social: {
@@ -119,11 +138,11 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "Limu Zaman",
+    name: "SK Ridoy",
     role: "AI UI/UX Designer",
     specialization: "AI Interface Design & User Experience",
-    image: "/limu.png", // Using local fallback until external images are properly configured
-    badge: "Design Innovator",
+    image: "/ridoy.png", // Using local fallback until external images are properly configured
+    badge: "Test Engineering Lead",
     bio: "Creating intuitive AI-powered interfaces and exceptional user experiences. Expert in designing complex AI systems with human-centered approaches.",
     skills: ["AI Interface Design", "User Experience", "Interaction Design", "Design Systems"],
     social: {
@@ -138,6 +157,7 @@ const teamMembers: TeamMember[] = [
     specialization: "Human Resources & Operations",
     image: "/priya.png", // Using local fallback until external images are properly configured
     badge: "People Leader",
+    // badge: "People & Culture Leader",
     bio: "Leading people operations and driving organizational excellence. Expert in talent management, employee engagement, and operational efficiency.",
     skills: ["Human Resources", "Operations Management", "Talent Development", "Organizational Strategy"],
     social: {
@@ -283,7 +303,7 @@ export const TeamSection = () => {
                 <p className="text-sm sm:text-base text-muted-foreground text-center leading-relaxed">
                   {description}
                 </p>
-                
+
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-semibold text-xs sm:text-sm mb-2 text-yellow-400">Key Capabilities:</h4>
@@ -354,6 +374,8 @@ export const DreamTeamSection = () => {
               status={member.badge}
               avatarUrl={member.image}
               showUserInfo={true}
+              className="filter grayscale hover:grayscale-0 transition duration-500"
+
             />
           </MotionDiv>
         ))}

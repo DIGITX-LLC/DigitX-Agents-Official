@@ -13,7 +13,7 @@ export const HeroSection = () => {
     target: ref,
     offset: ["start start", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 1.02]);
   const glow = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.6]);
@@ -21,7 +21,7 @@ export const HeroSection = () => {
   return (
     <section ref={ref} className="relative container w-full px-4 sm:px-6 lg:px-8">
       <div className="grid place-items-center lg:max-w-screen-xl gap-4 sm:gap-6 lg:gap-8 mx-auto pt-12 pb-4 sm:pt-16 md:pt-20 lg:pt-32 md:pb-8">
-        <MotionDiv 
+        <MotionDiv
           className="text-center space-y-4 sm:space-y-6 lg:space-y-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,14 +49,14 @@ export const HeroSection = () => {
             {`Transform your business with our revolutionary AI Agent Operating System. Build, deploy, and manage intelligent agents that automate complex workflows, boost productivity, and drive innovation across any industry.`}
           </p>
 
-          <MotionDiv 
+          <MotionDiv
             className="space-y-3 sm:space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center justify-center px-4 sm:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
-            <Button 
-              asChild 
+            <Button
+              asChild
               className="w-full sm:w-72 md:w-auto md:px-6 lg:px-8 font-bold group/arrow bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black border-0 py-3 sm:py-4"
             >
               <a href="#contact">
@@ -80,18 +80,18 @@ export const HeroSection = () => {
           </MotionDiv>
         </MotionDiv>
 
-        <MotionDiv 
+        <MotionDiv
           className="relative group mt-6 sm:mt-8 md:mt-10 lg:mt-14 w-full"
           style={{ y, scale }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
         >
-          <MotionDiv 
+          <MotionDiv
             className="absolute top-2 sm:-top-4 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-12 sm:h-16 md:h-24 lg:h-80 bg-yellow-400 rounded-full blur-3xl"
             style={{ opacity: glow }}
           ></MotionDiv>
-          
+
           {/* AI Dashboard Mockup */}
           <div className="w-full max-w-[1200px] mx-auto rounded-lg relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 overflow-hidden">
             {/* Dashboard Header */}
@@ -243,20 +243,18 @@ export const HeroSection = () => {
                   ].map((step, i) => (
                     <div key={i} className="flex items-center flex-shrink-0">
                       <div className="flex flex-col items-center">
-                        <div className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border-2 mb-2 ${
-                          step.status === 'complete' ? 'bg-green-400 border-green-400' :
-                          step.status === 'active' ? 'bg-gradient-to-r from-yellow-400 to-amber-500 border-amber-500 animate-pulse' :
-                          'bg-gray-700 border-gray-600'
-                        }`}>
+                        <div className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border-2 mb-2 ${step.status === 'complete' ? 'bg-green-400 border-green-400' :
+                            step.status === 'active' ? 'bg-gradient-to-r from-yellow-400 to-amber-500 border-amber-500 animate-pulse' :
+                              'bg-gray-700 border-gray-600'
+                          }`}>
                           <span className="text-sm sm:text-base font-bold text-black">{i + 1}</span>
                         </div>
                         <div className="text-center">
                           <p className="text-xs sm:text-sm text-white font-medium mb-1">{step.step}</p>
-                          <p className={`text-xs ${
-                            step.status === 'complete' ? 'text-green-400' :
-                            step.status === 'active' ? 'text-amber-400' :
-                            'text-gray-500'
-                          }`}>{step.status}</p>
+                          <p className={`text-xs ${step.status === 'complete' ? 'text-green-400' :
+                              step.status === 'active' ? 'text-amber-400' :
+                                'text-gray-500'
+                            }`}>{step.status}</p>
                         </div>
                       </div>
                       {i < 3 && (
