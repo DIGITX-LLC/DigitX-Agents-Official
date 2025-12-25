@@ -94,8 +94,8 @@ export const PricingSection = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: { duration: 0.7, ease: "easeOut" }
@@ -124,7 +124,7 @@ export const PricingSection = () => {
         </h3>
       </MotionDiv>
 
-      <MotionDiv 
+      <MotionDiv
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4"
         variants={containerVariants}
         initial="hidden"
@@ -146,43 +146,51 @@ export const PricingSection = () => {
                     : "h-full"
                 }
               >
-              <CardHeader>
-                <CardTitle className="pb-2">{title}</CardTitle>
+                <CardHeader>
+                  <CardTitle className="pb-2">{title}</CardTitle>
 
-                <CardDescription className="pb-4">
-                  {description}
-                </CardDescription>
+                  <CardDescription className="pb-4">
+                    {description}
+                  </CardDescription>
 
-                <div>
-                  <span className="text-3xl font-bold">${price}</span>
-                  <span className="text-muted-foreground"> /month</span>
-                </div>
-              </CardHeader>
+                  <div>
+                    <span className="text-3xl font-bold">${price}</span>
+                    <span className="text-muted-foreground"> /month</span>
+                  </div>
+                </CardHeader>
 
-              <CardContent className="flex">
-                <div className="space-y-4">
-                  {benefitList.map((benefit) => (
-                    <span key={benefit} className="flex">
-                      <Check className="text-yellow-400 mr-2" />
-                      <h3>{benefit}</h3>
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
+                <CardContent className="flex">
+                  <div className="space-y-4">
+                    {benefitList.map((benefit) => (
+                      <span key={benefit} className="flex">
+                        <Check className="text-yellow-400 mr-2" />
+                        <h3>{benefit}</h3>
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
 
-              <CardFooter>
-              <Button
-              asChild
-              variant={popular === PopularPlan.YES ? "default" : "outline"}
-                 className={
-              popular === PopularPlan.YES
-                ? "w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold"
-                : "w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
-               }
-                 >
-                 <a href="mailto:admin@digitxgroup.com">
+                <CardFooter>
+                  <Button
+                    asChild
+                    variant={popular === PopularPlan.YES ? "default" : "outline"}
+                    className={
+                      popular === PopularPlan.YES
+                        ? "w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black font-semibold"
+                        : "w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+                    }
+                  >
+                    {/* <a href="mailto:admin@digitxgroup.com">
                    {buttonText}
-                  </a>
+                  </a> */}
+
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&to=admin@digitxgroup.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {buttonText}
+                    </a>
                   </Button>
 
 

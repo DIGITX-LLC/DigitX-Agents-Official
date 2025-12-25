@@ -52,12 +52,15 @@ export const ContactSection = () => {
     const { firstName, lastName, email, subject, message } = values;
     console.log(values);
 
-    const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
-    )}`;
-    
+    // const mailToLink = `mailto:admin@digitxgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    //   `Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`
+    // )}`;
+    // window.location.href = mailToLink;
 
-    window.location.href = mailToLink;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=admin@digitxgroup.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello I am ${firstName} ${lastName}, my Email is ${email}.\n${message}`)}`;
+    window.open(gmailLink, "_blank");
+
+
   }
 
   return (
@@ -101,10 +104,19 @@ export const ContactSection = () => {
               </div>
 
               <div>
-              <a href="mailto:admin@digitxgroup.com" className="text-blue-600 hover:underline">
+                {/* <a href="mailto:admin@digitxgroup.com" className="text-blue-600 hover:underline">
                admin@digitxgroup.com
-                   </a>
-                 </div>
+                   </a> */}
+
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=admin@digitxgroup.com"
+                  target="_blank"
+                  className="text-blue-600 hover:underline"
+                  rel="noopener noreferrer"
+                >admin@digitxgroup.com
+                </a>
+
+              </div>
 
             </div>
 
