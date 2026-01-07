@@ -216,7 +216,7 @@ export const ProductsSection = () => {
                           {/* Visit Site Button */}
                           <button
                             onClick={() => window.open(product.url, '_blank')}
-                            className="w-full py-3 bg-yellow-400/20 hover:bg-yellow-400/30 border border-yellow-400/50 rounded-lg text-yellow-400 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/20 z-50 relative"
+                            className="w-full py-2 bg-yellow-400/20 hover:bg-yellow-400/30 border border-yellow-400/50 rounded-lg text-yellow-400 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/20 z-50 relative"
                           >
                             Visit Site →
                           </button>
